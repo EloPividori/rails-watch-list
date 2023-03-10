@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/lists">
-      <img src="https://thumbs.dreamstime.com/b/movie-film-company-logo-design-vector-template-movie-film-company-logo-design-inspiration-vector-template-167661473.jpg" />
-</a>
+  <%= link_to root_path, class: "navbar-brand" do %>
+        <img src="https://thumbs.dreamstime.com/b/movie-film-company-logo-design-vector-template-movie-film-company-logo-design-inspiration-vector-template-167661473.jpg" />
+      <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,10 +10,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/lists">My Lists</a>
+            <%= link_to root_path, class: "nav-link" do %>
+              My Lists
+            <% end %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/lists/new">New List</a>
+            <%= link_to new_list_path, class: "nav-link" do %>
+              New List
+            <% end %>
           </li>
       </ul>
     </div>
